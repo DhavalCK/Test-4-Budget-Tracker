@@ -1,0 +1,48 @@
+// Tables
+.section__table {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 40rem);
+  grid-template-rows: 4rem 1fr;
+  align-items: flex-start;
+  justify-content: center;
+  row-gap: 1rem;
+  column-gap: 20rem;
+  h2 {
+    margin: auto;
+  }
+}
+
+table,
+tr,
+th,
+td {
+  // color: $color-grey-2;
+  border: 1px solid $color-grey-1;
+  border-collapse: collapse;
+  text-align: center;
+  padding: 1rem;
+}
+
+.total--row {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.income__table {
+  thead {
+    background-color: $color-green-light;
+  }
+  tbody {
+    background-color: lighten($color-green-light, 20%);
+  }
+}
+
+.expense__table {
+  thead {
+    background-color: $color-red-light;
+  }
+  tbody {
+    background-color: lighten($color-red-light, 20%);
+  }
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget App</title>
+    <link rel="stylesheet" href="./sass/main.css">
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+
+    <script defer src="./js/script.js">
+    </script>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- BUDGET SECTION -->
+        <header class="budget">
+            <h1 class="budget__heading">My Budget</h1>
+            <h2 class="budget__value">&#8377;0</h2>
+            <div class="budget__cards">
+                <div class="budget__card">
+                    <h3 class="budget__card--title">Income</h3>
+                    <h4 class="budget__card--value budget__income--total color--green">&#8377;0</h4>
+                </div>
+                <div class="budget__card">
+                    <h3 class="budget__card--title">Expense</h3>
+                    <div class="budget__expense--values">
+                        <h4 class="budget__card--value budget__expense--total color--red">&#8377;0 </h4>
+                        &nbsp;
+                        <span class="budget__expense--percentage">(-0%)</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- FORM SECTION -->
+        <form class="form">
+            <select name="budget" class="form__input input--choice">
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+            <div class="form__field">
+                <input type="text" name="task" placeholder="Enter Task" class="form__input input--task" required>
+            </div>
+            <div class="form__field">
+                <input type="number" name="value" class="form__input input--value" placeholder="Enter Income" required>
+                <p class="error input--value-error hidden">*value must be positive.</p>
+            </div>
+            <div class="form__field">
+                <button class="form__btn btn--add">Add</button>
+            </div>
+        </form>
+
+        <!-- TABLE SECTION -->
+        <section class="section__table">
+            <h2>My Income</h2>
+            <h2>My Expenses</h2>
+
+            <!-- INCOME TABLE -->
+            <table class="income__table">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Task</th>
+                        <th>Income</th>
+                    </tr>
+                </thead>
+                <tbody class="income__list">
+                    <!-- 
+                    <tr class="income__item">
+                        <td>1</td>
+                        <td>Watch Movie</td>
+                        <td>100</td>
+                    </tr> -->
+                    <!-- <tr class="income__empty hidden">
+                        <td colspan="3">Not Have Any Income.</td>
+                    </tr> -->
+                </tbody>
+                <tr class="total--row">
+                    <td colspan="2">Total</td>
+                    <td class="total--income">₹0</td>
+                </tr>
+
+            </table>
+
+            <!-- EXPENSE TABLE -->
+            <table class="expense__table">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Task</th>
+                        <th>Expense</th>
+                    </tr>
+                </thead>
+                <tbody class="expense__list">
+                    <!-- <tr class="expense__item">
+                        <td>1</td>
+                        <td>Watch Movie</td>
+                        <td>100</td>
+                    </tr> -->
+                </tbody>
+                <tr class="total--row">
+                    <td colspan="2">Total</td>
+                    <td class="total--expense">₹0</td>
+                </tr>
+            </table>
+        </section>
+    </div>
+</body>
+
+</html>

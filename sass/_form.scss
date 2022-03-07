@@ -1,0 +1,67 @@
+// Form
+.form {
+  background-color: $color-grey;
+  height: 10rem;
+
+  padding: 1rem 2rem;
+  @include flex-center;
+  gap: 4rem;
+
+  &__field {
+    position: relative;
+  }
+  &__input {
+    padding: 1rem;
+    font-size: 1.8rem;
+    border-radius: 0.8rem;
+    border: none;
+    transition: all 0.1s;
+    outline: 1px solid transparent;
+    &:focus {
+      outline: 3px solid $color-white;
+      outline-offset: 0.5rem;
+    }
+  }
+
+  select {
+    cursor: pointer;
+    width: 15rem;
+  }
+  &__btn {
+    cursor: pointer;
+    padding: 1rem 2.4rem;
+    font-size: 2rem;
+    background-color: $color-primary;
+    color: $color-white;
+    font-weight: 600;
+    border-radius: 0.8rem;
+    border: none;
+    outline: none;
+    transition: all 0.2s;
+    &:hover,
+    &:focus {
+      transform: translateY(-4px);
+      box-shadow: 0 1rem 1rem rgba($color-black, 0.1);
+    }
+    &:active {
+      transform: translateY(-2px);
+      box-shadow: 0 0.6rem 1.2rem rgba($color-black, 0.1);
+    }
+  }
+}
+
+// Validation
+.error {
+  font-size: 1.4rem;
+  position: absolute;
+  bottom: -2rem;
+  left: 5px;
+  color: red;
+}
+.hidden {
+  display: none;
+}
+.input {
+  &--value-error {
+  }
+}

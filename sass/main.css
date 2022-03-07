@@ -1,0 +1,256 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: sans-serif;
+  line-height: 1;
+}
+
+.color--green {
+  color: #116e11;
+}
+
+.color--red {
+  color: #eb5252;
+}
+
+.budget {
+  height: 28rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: -webkit-gradient(linear, left top, right bottom, from(#afc2fb), to(#0a3dd4));
+  background: linear-gradient(to right bottom, #afc2fb, #0a3dd4);
+  padding: 1rem;
+}
+
+.budget__heading {
+  font-size: 4.4rem;
+  font-weight: 7 00;
+  padding: 1rem 2rem;
+}
+
+.budget__value {
+  font-size: 3.6rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.budget__cards {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.budget__card {
+  padding: 2rem;
+  background: #fff;
+  height: 12rem;
+  width: 15rem;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.budget__card--title {
+  font-weight: 600;
+  font-size: 2.4rem;
+  padding-bottom: 1rem;
+}
+
+.budget__card--value {
+  font-weight: inherit;
+  font-size: 2.8rem;
+}
+
+.budget__card--value + span {
+  font-weight: 300;
+  color: red;
+}
+
+.budget__expense--values {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form {
+  background-color: #ddd;
+  height: 10rem;
+  padding: 1rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 4rem;
+}
+
+.form__field {
+  position: relative;
+}
+
+.form__input {
+  padding: 1rem;
+  font-size: 1.8rem;
+  border-radius: 0.8rem;
+  border: none;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+  outline: 1px solid transparent;
+}
+
+.form__input:focus {
+  outline: 3px solid #fff;
+  outline-offset: 0.5rem;
+}
+
+.form select {
+  cursor: pointer;
+  width: 15rem;
+}
+
+.form__btn {
+  cursor: pointer;
+  padding: 1rem 2.4rem;
+  font-size: 2rem;
+  background-color: #4d78f7;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 0.8rem;
+  border: none;
+  outline: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.form__btn:hover, .form__btn:focus {
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+  -webkit-box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.form__btn:active {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  -webkit-box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.1);
+}
+
+.error {
+  font-size: 1.4rem;
+  position: absolute;
+  bottom: -2rem;
+  left: 5px;
+  color: red;
+}
+
+.hidden {
+  display: none;
+}
+
+.section__table {
+  padding: 2rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (40rem)[2];
+      grid-template-columns: repeat(2, 40rem);
+  -ms-grid-rows: 4rem 1fr;
+      grid-template-rows: 4rem 1fr;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  row-gap: 1rem;
+  -webkit-column-gap: 20rem;
+          column-gap: 20rem;
+}
+
+.section__table h2 {
+  margin: auto;
+}
+
+table,
+tr,
+th,
+td {
+  border: 1px solid #777;
+  border-collapse: collapse;
+  text-align: center;
+  padding: 1rem;
+}
+
+.total--row {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.income__table thead {
+  background-color: lightgreen;
+}
+
+.income__table tbody {
+  background-color: #e8fce8;
+}
+
+.expense__table thead {
+  background-color: lightcoral;
+}
+
+.expense__table tbody {
+  background-color: #fbdbdb;
+}
+/*# sourceMappingURL=main.css.map */

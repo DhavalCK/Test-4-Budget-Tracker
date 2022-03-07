@@ -1,0 +1,68 @@
+// HEADER
+.budget {
+  height: 28rem;
+  width: 100%;
+
+  @include flex-center;
+  flex-direction: column;
+
+  background: linear-gradient(
+    to right bottom,
+    $color-primary-light,
+    $color-primary-dark
+  );
+
+  padding: 1rem;
+  &__heading {
+    font-size: 4.4rem;
+    font-weight: 7 00;
+    padding: 1rem 2rem;
+  }
+
+  &__value {
+    font-size: 3.6rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
+  // Card Container
+  &__cards {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__card {
+    padding: 2rem;
+    background: $color-white;
+    height: 12rem;
+    width: 15rem;
+    border-radius: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &--title {
+      font-weight: 600;
+      font-size: 2.4rem;
+      padding-bottom: 1rem;
+    }
+    &--value {
+      font-weight: inherit;
+      font-size: 2.8rem;
+
+      & + span {
+        font-weight: 300;
+        color: red;
+      }
+    }
+  }
+
+  // Expense Card Value Styling
+  &__expense--values {
+    display: flex;
+    align-items: center;
+  }
+}
